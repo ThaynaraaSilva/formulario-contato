@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(-120deg, #722eb1, #1f043a) fixed;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+input,
+textarea,
+button {
+    font-family: inherit;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 16px;
+}
+
+.form_box {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.form_box .title {
+    padding: 24px 32px;
+    font-size: 24px;
+    border-bottom: thin solid #ccc;
+    text-align: center;
+}
+
+.form_box form {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 32px;
+}
+
+.form_box input,
+.form_box textarea {
+    width: calc(50% - 8px);
+    height: 48px;
+    border-radius: 8px;
+    border: thin solid #999;
+    padding-left: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.form_box input:first-child {
+    margin-right: 16px;
+}
+
+.form_box input[name=assunto] {
+    width: 100%;
+}
+
+.form_box textarea {
+    width: 100%;
+    height: 120px;
+    padding: 16px;
+    resize: vertical;
+}
+
+.form_box input:focus,
+.form_box textarea:focus {
+    outline: 2px solid #722eb1;
+    outline-offset: 1px;
+    border-color: #722eb1;
+}
+
+.form_box button {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    width: 180px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #722eb1;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.form_box button:hover {
+    background-color: #1f043a;
+}
+
+.form_box button:focus-visible {
+    outline: 2px solid #1f043a;
+    outline-offset: 2px;
+}
+
+#mensagem {
+    width: 100%;
+    color: #000000;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Telas pequenas */
+@media (max-width: 600px) {
+    .form_box .title {
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    .form_box form {
+        padding: 20px;
+    }
+
+    .form_box input {
+        width: 100%;
+    }
+
+    .form_box input:first-child {
+        margin-right: 0;
+    }
+
+    .form_box button {
+        width: 100%;
+    }
+}

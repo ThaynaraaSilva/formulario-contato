@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Formulário</title>
+   <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+   <div class="container">
+      <div class="form_box">
+         <h2 class="title">Envie sua mensagem</h2>
+
+         <form id="formulario" action="https://formspree.io/f/mnpnpqjo" method="POST">
+
+            <input type="text" name="nome" placeholder="Digite seu nome" required>
+
+            <input type="email" name="email" placeholder="Digite seu email" required>
+
+            <input type="text" name="subject" placeholder="Digite o assunto" required>
+
+            <textarea name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+
+            <p id="mensagem"></p>
+         </form>
+      </div>
+   </div>
+   <script src="src/js/script.js"></script>
+</body>
+</html>
